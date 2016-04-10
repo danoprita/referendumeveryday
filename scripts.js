@@ -60,6 +60,7 @@ app.controller('ReferendumController', function($scope, $interval) {
     $scope.n = 0;
 
     $interval(function() {
+        $scope.n = $scope.n + 1;
         var m = new Date().getTime() % $scope.ideas.length;
         if ($scope.n % 2 == 0)
             $scope.ideas[m].yesVotes = $scope.ideas[m].yesVotes +1
